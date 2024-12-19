@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animasi Bola Melompat</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #87CEEB; /* Latar belakang biru seperti langit */
+      overflow: hidden;
+    }
+
+    .bola {
+      width: 50px;
+      height: 50px;
+      background-color: #FF6347; /* Warna bola merah tomat */
+      border-radius: 50%; /* Membuat bola menjadi bulat */
+      position: relative;
+      animation: melompat 2s infinite cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    @keyframes melompat {
+      0% {
+        transform: translateY(0); /* Bola di posisi awal */
+      }
+      50% {
+        transform: translateY(300px); /* Bola turun ke bawah */
+      }
+      100% {
+        transform: translateY(0); /* Bola kembali ke posisi awal */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bola"></div>
+</body>
+</html>
